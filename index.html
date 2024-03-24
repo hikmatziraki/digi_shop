@@ -3,40 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>digi_shop</title>
+    <title>Document</title>
     <style>
         body{
-            margin: 0%;
-            padding: 0%;
-            box-sizing: border-box;
-            background-color: lightgray;
+            font-family: Tahoma;
+            background-color: darkgrey;
         }
-        .products{
-            margin: 20px;
-            margin-left: 25px;
+        .flip-card{
+            width: 300px;
+            height: 400px;
+            perspective: 1000px;
+            display: inline-block;
+            padding: 10px;
         }
-        .img{
-            width: 250px;
-            height: 250px;
-            border-radius: 15px;
-            box-shadow: 0 0 9px rgb(0, 0, 0);
+        .flip-card-inner{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 10px;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
         }
-        .img:hover{
-            box-shadow: 0 0 9px rgb(128, 0, 0);
+        .flip-card:hover .flip-card-inner{
+            transform: rotateY(180deg);
         }
-        .name{
-            text-align: justify;
-            
+        .flip-card-front, .flip-card-back{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 10px;
+        }
+        .flip-card-front{
+            background-color: #f1f1f1;
+            overflow: hidden;
+        }
+        .flip-card-back img{
+            max-height: 100%;
+        }
+        .flip-card-back{
+            background-color: #0b9099;
+            color: rgb(0, 0, 0);
+            transform: rotateY(180deg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .card-content{
+            padding: 20px;
+            text-align: center;
+        }
+        .card-content h2{
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+        .card-content p{
+            font-size: 20px;
+            margin-bottom: 24px;
+            color: rgb(255, 255, 255);
+            font-family: sans-serif;
+        }
+        .btn{
+            padding: 10px 20px;
+            background-color: #f1f1f1;
+            color: #000000;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .btn:hover{
+            background-color: #333;
+            color: #f1f1f1;
         }
     </style>
 </head>
 <body>
-    <div class="products">
-        <a href="">
-            <img class="img" src="imgs/powerbank (1).jpg" alt="">
-        </a>
-        <h3 class="name">Power Bank</h3>
-        <p></p>
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src="01.jpg" alt="" width="300px" height="400px">
+            </div>
+            <div class="flip-card-back">
+                <div class="card-content">
+                    <h2>Baseus Power Bank</h2>
+                    <p>Baseus Power Bank 10000mAh 20000mAh
+                        Mini Magneetic Wireless Fast Charge
+                        Auto-wake For iPhone 15,
+                        14, 13 Pro Max Magsafe Power Bank
+                    </p>
+                    <a href="https://s.click.aliexpress.com/e/_mOdUAgS" class="btn">Buy Now</a>
+                </div>
+            </div>
+        </div>
     </div>
+    <!-- <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src="powerbank3.png" alt="" width="300px" height="400px">
+            </div>
+            <div class="flip-card-back">
+                <div class="card-content">
+                    <h2>Baseus Power Bank</h2>
+                    <p>Baseus Power Bank 10000mAh 20000mAh
+                        Mini Magneetic Wireless Fast Charge
+                        Auto-wake For iPhone 15,
+                        14, 13 Pro Max Magsafe Power Bank
+                    </p>
+                    <a href="www.google.com" class="btn">Buy Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src="powerbank (1).jpg" alt="" width="300px" height="400px">
+            </div>
+            <div class="flip-card-back">
+                <div class="card-content">
+                    <h2>Baseus Power Bank</h2>
+                    <p>Baseus Power Bank 10000mAh 20000mAh
+                        Mini Magneetic Wireless Fast Charge
+                        Auto-wake For iPhone 15,
+                        14, 13 Pro Max Magsafe Power Bank
+                    </p>
+                    <a href="www.google.com" class="btn">Buy Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src="powerbank (2).jpg" alt="" width="300px" height="400px">
+            </div>
+            <div class="flip-card-back">
+                <div class="card-content">
+                    <h2>Baseus Power Bank</h2>
+                    <p>Baseus Power Bank 10000mAh 20000mAh
+                        Mini Magneetic Wireless Fast Charge
+                        Auto-wake For iPhone 15,
+                        14, 13 Pro Max Magsafe Power Bank
+                    </p>
+                    <a href="www.google.com" class="btn">Buy Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src="01.jpg" alt="" width="300px" height="400px">
+            </div>
+            <div class="flip-card-back">
+                <div class="card-content">
+                    <h2>Baseus Power Bank</h2>
+                    <p>Baseus Power Bank 10000mAh 20000mAh
+                        Mini Magneetic Wireless Fast Charge
+                        Auto-wake For iPhone 15,
+                        14, 13 Pro Max Magsafe Power Bank
+                    </p>
+                    <a href="www.google.com" class="btn">Buy Now</a>
+                </div>
+            </div>
+        </div>
+    </div> -->
 </body>
 </html>
